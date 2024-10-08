@@ -1,0 +1,29 @@
+services:
+  db:
+    image: 'postgres:alpine3.19'
+    container_name: db
+    environment:
+      POSTGRES_DB: spring
+      POSTGRES_USER: waitaty
+      POSTGRES_PASSWORD: ijb^A9ooQFK9DTXA6z^p
+    ports:
+      - "5432:5432"
+    volumes:
+      - aston_task_2:/var/lib/postgresql/data
+
+  spring:
+    image: 'spring:latest'
+    build:
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: jdbc:postgresql://host.docker.internal:5432/spring
+      DATABASE_USERNAME: waitaty
+      DATABASE_PASSWORD: ijb^A9ooQFK9DTXA6z^p
+    ports:
+      - "8080:8080"
+
+volumes:
+  aston_task_2:
+    name: aston-task-2

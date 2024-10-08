@@ -1,0 +1,472 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-locality-table
+      author: Yauheni Haikou
+      changes:
+        - insert:
+            tableName: locality
+            columns:
+              - column:
+                  name: city
+                  value: "New York"
+              - column:
+                  name: region
+                  value: "New York"
+              - column:
+                  name: latitude
+                  valueNumeric: 40.7128
+              - column:
+                  name: longitude
+                  valueNumeric: -74.0060
+        - insert:
+            tableName: locality
+            columns:
+              - column:
+                  name: city
+                  value: "London"
+              - column:
+                  name: region
+                  value: "Greater London"
+              - column:
+                  name: latitude
+                  valueNumeric: 51.5074
+              - column:
+                  name: longitude
+                  valueNumeric: -0.1278
+        - insert:
+            tableName: locality
+            columns:
+              - column:
+                  name: city
+                  value: "Paris"
+              - column:
+                  name: region
+                  value: "Ile-de-France"
+              - column:
+                  name: latitude
+                  valueNumeric: 48.8566
+              - column:
+                  name: longitude
+                  valueNumeric: 2.3522
+        - insert:
+            tableName: locality
+            columns:
+              - column:
+                  name: city
+                  value: "Tokyo"
+              - column:
+                  name: region
+                  value: "Kanto"
+              - column:
+                  name: latitude
+                  valueNumeric: 35.6762
+              - column:
+                  name: longitude
+                  valueNumeric: 139.6503
+        - insert:
+            tableName: locality
+            columns:
+              - column:
+                  name: city
+                  value: "Berlin"
+              - column:
+                  name: region
+                  value: "Berlin"
+              - column:
+                  name: latitude
+                  valueNumeric: 52.5200
+              - column:
+                  name: longitude
+                  valueNumeric: 13.4050
+        - insert:
+            tableName: locality
+            columns:
+              - column:
+                  name: city
+                  value: "Sydney"
+              - column:
+                  name: region
+                  value: "New South Wales"
+              - column:
+                  name: latitude
+                  valueNumeric: -33.8688
+              - column:
+                  name: longitude
+                  valueNumeric: 151.2093
+        - insert:
+            tableName: locality
+            columns:
+              - column:
+                  name: city
+                  value: "Moscow"
+              - column:
+                  name: region
+                  value: "Moscow"
+              - column:
+                  name: latitude
+                  valueNumeric: 55.7558
+              - column:
+                  name: longitude
+                  valueNumeric: 37.6173
+        - insert:
+            tableName: locality
+            columns:
+              - column:
+                  name: city
+                  value: "Rio de Janeiro"
+              - column:
+                  name: region
+                  value: "Rio de Janeiro"
+              - column:
+                  name: latitude
+                  valueNumeric: -22.9068
+              - column:
+                  name: longitude
+                  valueNumeric: -43.1729
+        - insert:
+            tableName: locality
+            columns:
+              - column:
+                  name: city
+                  value: "Cape Town"
+              - column:
+                  name: region
+                  value: "Western Cape"
+              - column:
+                  name: latitude
+                  valueNumeric: -33.9249
+              - column:
+                  name: longitude
+                  valueNumeric: 18.4241
+        - insert:
+            tableName: locality
+            columns:
+              - column:
+                  name: city
+                  value: "Toronto"
+              - column:
+                  name: region
+                  value: "Ontario"
+              - column:
+                  name: latitude
+                  valueNumeric: 43.6532
+              - column:
+                  name: longitude
+                  valueNumeric: -79.3832
+
+  - changeSet:
+      id: insert-into-attraction-table
+      author: Yauheni Haikou
+      changes:
+        - insert:
+            tableName: attraction
+            columns:
+              - column:
+                  name: name
+                  value: "Statue of Liberty"
+              - column:
+                  name: creation_date
+                  valueDate: "1886-10-28"
+              - column:
+                  name: description
+                  value: "A colossal neoclassical sculpture on Liberty Island."
+              - column:
+                  name: type
+                  value: "PARK"
+              - column:
+                  name: locality_id
+                  valueNumeric: 1
+        - insert:
+            tableName: attraction
+            columns:
+              - column:
+                  name: name
+                  value: "Eiffel Tower"
+              - column:
+                  name: creation_date
+                  valueDate: "1889-03-31"
+              - column:
+                  name: description
+                  value: "A wrought-iron lattice tower in Paris."
+              - column:
+                  name: type
+                  value: "PALACE"
+              - column:
+                  name: locality_id
+                  valueNumeric: 3
+        - insert:
+            tableName: attraction
+            columns:
+              - column:
+                  name: name
+                  value: "Tokyo Skytree"
+              - column:
+                  name: creation_date
+                  valueDate: "2012-05-22"
+              - column:
+                  name: description
+                  value: "A broadcasting and observation tower in Tokyo."
+              - column:
+                  name: type
+                  value: "PALACE"
+              - column:
+                  name: locality_id
+                  valueNumeric: 4
+        - insert:
+            tableName: attraction
+            columns:
+              - column:
+                  name: name
+                  value: "Sydney Opera House"
+              - column:
+                  name: creation_date
+                  valueDate: "1973-10-20"
+              - column:
+                  name: description
+                  value: "A multi-venue performing arts centre in Sydney."
+              - column:
+                  name: type
+                  value: "ARCHAEOLOGICAL_SITE"
+              - column:
+                  name: locality_id
+                  valueNumeric: 6
+        - insert:
+            tableName: attraction
+            columns:
+              - column:
+                  name: name
+                  value: "Colosseum"
+              - column:
+                  name: creation_date
+                  valueDate: "1680-01-01"
+              - column:
+                  name: description
+                  value: "An ancient amphitheatre in Rome."
+              - column:
+                  name: type
+                  value: "ARCHAEOLOGICAL_SITE"
+              - column:
+                  name: locality_id
+                  valueNumeric: 3
+
+
+  - changeSet:
+      id: insert-into-assistance-table
+      author: Yauheni Haikou
+      changes:
+        - insert:
+            tableName: assistance
+            columns:
+              - column:
+                  name: type
+                  value: "Guided Tour"
+              - column:
+                  name: description
+                  value: "A guided tour of the attraction."
+              - column:
+                  name: performer
+                  value: "John Doe"
+        - insert:
+            tableName: assistance
+            columns:
+              - column:
+                  name: type
+                  value: "Photography"
+              - column:
+                  name: description
+                  value: "Professional photography service."
+              - column:
+                  name: performer
+                  value: "Jane Smith"
+        - insert:
+            tableName: assistance
+            columns:
+              - column:
+                  name: type
+                  value: "Transportation"
+              - column:
+                  name: description
+                  value: "Shuttle service to and from the attraction."
+              - column:
+                  name: performer
+                  value: "Transport Solutions"
+        - insert:
+            tableName: assistance
+            columns:
+              - column:
+                  name: type
+                  value: "Audio Guide"
+              - column:
+                  name: description
+                  value: "Audio guide service in multiple languages."
+              - column:
+                  name: performer
+                  value: "Global Audio Tours"
+        - insert:
+            tableName: assistance
+            columns:
+              - column:
+                  name: type
+                  value: "VIP Access"
+              - column:
+                  name: description
+                  value: "VIP access with priority entry."
+              - column:
+                  name: performer
+                  value: "Elite Experience"
+        - insert:
+            tableName: assistance
+            columns:
+              - column:
+                  name: type
+                  value: "Dining Reservation"
+              - column:
+                  name: description
+                  value: "Reservation service for nearby dining."
+              - column:
+                  name: performer
+                  value: "Restaurant Connect"
+        - insert:
+            tableName: assistance
+            columns:
+              - column:
+                  name: type
+                  value: "Souvenir Shop"
+              - column:
+                  name: description
+                  value: "Exclusive souvenir shopping experience."
+              - column:
+                  name: performer
+                  value: "Souvenir Mart"
+        - insert:
+            tableName: assistance
+            columns:
+              - column:
+                  name: type
+                  value: "Accessibility Service"
+              - column:
+                  name: description
+                  value: "Assistance for visitors with disabilities."
+              - column:
+                  name: performer
+                  value: "Assist Care"
+        - insert:
+            tableName: assistance
+            columns:
+              - column:
+                  name: type
+                  value: "Security Service"
+              - column:
+                  name: description
+                  value: "Personal security service during the visit."
+              - column:
+                  name: performer
+                  value: "Secure Visit"
+        - insert:
+            tableName: assistance
+            columns:
+              - column:
+                  name: type
+                  value: "Event Planning"
+              - column:
+                  name: description
+                  value: "Custom event planning at the attraction."
+              - column:
+                  name: performer
+                  value: "Event Masters"
+
+  - changeSet:
+      id: insert-into-assistance-attraction-table
+      author: Yauheni Haikou
+      changes:
+        - insert:
+            tableName: assistance-attraction
+            columns:
+              - column:
+                  name: assistance_id
+                  valueNumeric: 1
+              - column:
+                  name: attraction_id
+                  valueNumeric: 1
+        - insert:
+            tableName: assistance-attraction
+            columns:
+              - column:
+                  name: assistance_id
+                  valueNumeric: 2
+              - column:
+                  name: attraction_id
+                  valueNumeric: 2
+        - insert:
+            tableName: assistance-attraction
+            columns:
+              - column:
+                  name: assistance_id
+                  valueNumeric: 3
+              - column:
+                  name: attraction_id
+                  valueNumeric: 3
+        - insert:
+            tableName: assistance-attraction
+            columns:
+              - column:
+                  name: assistance_id
+                  valueNumeric: 4
+              - column:
+                  name: attraction_id
+                  valueNumeric: 4
+        - insert:
+            tableName: assistance-attraction
+            columns:
+              - column:
+                  name: assistance_id
+                  valueNumeric: 5
+              - column:
+                  name: attraction_id
+                  valueNumeric: 5
+        - insert:
+            tableName: assistance-attraction
+            columns:
+              - column:
+                  name: assistance_id
+                  valueNumeric: 6
+              - column:
+                  name: attraction_id
+                  valueNumeric: 5
+        - insert:
+            tableName: assistance-attraction
+            columns:
+              - column:
+                  name: assistance_id
+                  valueNumeric: 7
+              - column:
+                  name: attraction_id
+                  valueNumeric: 5
+        - insert:
+            tableName: assistance-attraction
+            columns:
+              - column:
+                  name: assistance_id
+                  valueNumeric: 8
+              - column:
+                  name: attraction_id
+                  valueNumeric: 4
+        - insert:
+            tableName: assistance-attraction
+            columns:
+              - column:
+                  name: assistance_id
+                  valueNumeric: 6
+              - column:
+                  name: attraction_id
+                  valueNumeric: 4
+        - insert:
+            tableName: assistance-attraction
+            columns:
+              - column:
+                  name: assistance_id
+                  valueNumeric: 10
+              - column:
+                  name: attraction_id
+                  valueNumeric: 4
+
