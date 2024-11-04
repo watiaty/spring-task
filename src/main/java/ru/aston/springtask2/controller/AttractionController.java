@@ -35,7 +35,7 @@ public class AttractionController {
     private final LocalityService localityService;
 
     /**
-     * Добавляет новую достопримечательность
+     * Добавляет новую достопримечательность q
      *
      * @param dto Содержит в себе данные для создания нового Attraction.
      * @return Возвращает DTO объекта Attraction и статус 201
